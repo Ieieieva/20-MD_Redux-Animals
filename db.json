@@ -1,0 +1,22 @@
+{
+  "animals": [
+    {
+      "id": 1,
+      "name": "Fluffy",
+      "image": "https://dinozoopasaule.lv/lv/getimage/uploads/newstype/voXXW9VUeTrwdMuQOqh2BiJXclEvpIgm.png?w=960",
+      "species": "cat"
+    },
+    {
+      "id": 2,
+      "name": "Kitten",
+      "image": "https://www.killarneycat.com/wp-content/uploads/sites/257/2022/04/17-1.png",
+      "species": "cat"
+    },
+    {
+      "id": 3,
+      "name": "Doggo",
+      "image": "https://res.cloudinary.com/dk-find-out/image/upload/q_80,w_1920,f_auto/580540_mjznrj.jpg",
+      "species": "dog"
+    }
+  ]
+}
