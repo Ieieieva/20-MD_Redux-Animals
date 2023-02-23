@@ -1,8 +1,10 @@
 import { useState } from 'react'
 import './App.css'
-import { useAddNewAnimalMutation, useDeleteAnimalMutation, useGetAnimalsQuery } from './Store/apiSlice'
-import { AnimalsList } from './Store/animalsList'
-import { AddAnimalForm } from './Store/addAnimalForm'
+import './Store/RTKQuery/apiAnimals.css'
+import { AddAnimalForm } from './Store/LocalStorage/addAnimalForm';
+import { AnimalsList } from './Store/LocalStorage/animalsList';
+import { useGetAnimalsQuery, useAddNewAnimalMutation, useDeleteAnimalMutation } from './Store/RTKQuery/apiSlice';
+
 
 interface Animal {
   id: number,
@@ -52,44 +54,54 @@ function App() {
         onSubmit={(e) => {
           e.preventDefault()
         }}>
-        <h2>Animaļi no RTK Query</h2>  
-        <div className='form__one'>
+         <span className='form__heading'>
+          Add new animal
+        </span> 
+        <div>
           <label
             className='form__label'>
             Name:
             <input
               type='text'
+              className='form__input'
               value={name}
+              required
+              name='name'
               onChange={(e) => {
                 setName(e.target.value)
               }}
             ></input>
           </label>
         </div>
-        <div className='form__two'>
+        <div>
           <label
             className='form__label'>
             Image src:
             <input
               type='text'
+              className='form__input'
               value={image}
+              name='image'
+              required
               onChange={(e) => {
                 setImage(e.target.value)
               }}
             ></input>
           </label>
         </div>
-        <div className='form__three'>
+        <div>
           <label
             className='form__label'>
             Select species:
             <select
-              className='dropdown'
-              name='animal'
+              className='form__input'
               value={species}
+              name='species'
+              required
               onChange={(e) => {
                 setSpecies(e.target.value)
               }}>
+              <option defaultValue="animal">animal</option>
               <option value="cat">cat</option>
               <option value="dog">dog</option>
               <option value="fish">fish</option>
@@ -99,7 +111,7 @@ function App() {
         <button
           onClick={handleSaveAnimal}
           >
-          add
+          ADD
         </button>
       </form>
 
@@ -115,9 +127,11 @@ function App() {
                 <div 
                   key={animal.id}
                   className='animal__card'>
-                  <img 
+                  <div className='animal__container--img'>
+                    <img 
                     className='animal__image'
                     src={animal.image}></img>
+                  </div>
                   <div>
                     <h3
                       className='animal__heading'>
@@ -129,11 +143,11 @@ function App() {
                     </span>
                     <br />
                     <br />
-                    {/* <button
+                    <button
                       onClick={() => deleteAnimal(animal.id)}
                     >
                       delete animal
-                    </button> */}
+                    </button>
                   </div>
                 </div>
               )
@@ -141,7 +155,6 @@ function App() {
           </>
         ): null}
       </div>
-
     </div>
   )
 }

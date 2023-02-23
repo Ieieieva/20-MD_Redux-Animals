@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { nanoid } from '@reduxjs/toolkit';
-import { animalAdded } from './animalsSlice';
+import { addAnimal } from './animalsSlice';
+import './localAnimals.css'
 
 export const AddAnimalForm = () => {
   const [name, setName] = useState('');
@@ -13,8 +14,8 @@ export const AddAnimalForm = () => {
   const handleAddAnimal = () => {
     if (name && image && species) {
       dispatch(
-        animalAdded({
-          id: nanoid,
+        addAnimal({
+          id: nanoid(),
           image,
           name,
           species
@@ -32,46 +33,54 @@ export const AddAnimalForm = () => {
         onSubmit={(e) => {
           e.preventDefault()
         }}>
-        <h2>Animaļi no initialState</h2>
-        <div className='form__one'>
+        <span className='form__heading'>
+          Add new animal
+        </span>
+        <div>
           <label
             className='form__label'>
             Name:
             <input
+              className='form__input'
               type='text'
               value={name}
               name='name'
+              required
               onChange={(e) => {
                 setName(e.target.value)
               }}
             ></input>
           </label>
         </div>
-        <div className='form__two'>
+        <div>
           <label
             className='form__label'>
             Image src:
             <input
               type='text'
+              className='form__input'
               value={image}
               name='image'
+              required
               onChange={(e) => {
                 setImage(e.target.value)
               }}
             ></input>
           </label>
         </div>
-        <div className='form__three'>
+        <div>
           <label
             className='form__label'>
             Select species:
             <select
-              className='dropdown'
+              className='form__input'
               name='species'
               value={species}
+              required
               onChange={(e) => {
                 setSpecies(e.target.value)
               }}>
+              <option defaultValue="animal">animal</option>
               <option value="cat">cat</option>
               <option value="dog">dog</option>
               <option value="fish">fish</option>
@@ -81,10 +90,9 @@ export const AddAnimalForm = () => {
         <button
           onClick={handleAddAnimal}
           >
-          add
+          ADD
         </button>
       </form>
     </>
   )
-
 }

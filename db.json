@@ -7,16 +7,34 @@
       "species": "cat"
     },
     {
-      "id": 2,
-      "name": "Kitten",
-      "image": "https://www.killarneycat.com/wp-content/uploads/sites/257/2022/04/17-1.png",
-      "species": "cat"
-    },
-    {
       "id": 3,
       "name": "Doggo",
       "image": "https://res.cloudinary.com/dk-find-out/image/upload/q_80,w_1920,f_auto/580540_mjznrj.jpg",
       "species": "dog"
+    },
+    {
+      "image": "https://www.pedigree.com.au/cdn-cgi/image/format%3Dauto%2Cq%3D90/sites/g/files/fnmzdf2091/files/2022-07/hero-default-dog.png",
+      "name": "Schoko",
+      "species": "dog",
+      "id": 5
+    },
+    {
+      "image": "https://www.pngplay.com/wp-content/uploads/9/Goldfish-No-Background.png",
+      "name": "Wish Fish",
+      "species": "fish",
+      "id": 6
+    },
+    {
+      "image": "https://pngfre.com/wp-content/uploads/transparent-cat-by-pngfre-75.png",
+      "name": "Mia",
+      "species": "cat",
+      "id": 7
+    },
+    {
+      "image": "https://www.killarneycat.com/wp-content/uploads/sites/257/2022/04/17-1.png",
+      "name": "zirgs",
+      "species": "cat",
+      "id": 8
     }
   ]
 }

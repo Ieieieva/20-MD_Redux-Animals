@@ -1,7 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit'
 import { setupListeners } from '@reduxjs/toolkit/query'
-import animalsReducer from '../Store/animalsSlice'
-import { apiSlice } from './apiSlice'
+import animalsReducer from './LocalStorage/animalsSlice'
+import { apiSlice } from './RTKQuery/apiSlice'
 
 const store =  configureStore({
   reducer: {

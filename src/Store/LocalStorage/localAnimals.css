@@ -1,0 +1,82 @@
+.animals {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+/* -------------SEARCH---------------- */
+
+.animal__filtering__container {
+  display: flex;
+  padding: 50px;
+  flex-wrap: wrap;
+}
+
+.animals__filtered {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.animal__filtering__label {
+  display: flex;
+  gap: 10px;
+  padding: 20px;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.animal__filtering__input {
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* ------------FORM----------------- */
+
+.form__heading {
+  font-size: 1.2rem;
+}
+
+.form__label {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.form__input {
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* -------------CARDS---------------- */
+
+.animals__container {
+  display: flex;
+  gap: 20px;
+  padding: 50px;
+  flex-wrap: wrap;
+}
+
+.animals__card {
+  width: 20%;
+  text-align: center;
+  background-color: rgb(254, 214, 161);
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 
+    0 1px 1px rgba(0,0,0,0.12), 
+    0 2px 2px rgba(0,0,0,0.12), 
+    0 4px 4px rgba(0,0,0,0.12), 
+    0 8px 8px rgba(0,0,0,0.12), 
+    0 16px 16px rgba(0,0,0,0.12);
+}
+
+.animals__container--img {
+  height: 65%;
+  display: flex;
+  align-items: center;
+}
+
+.animals__image {
+  width: 100%;
+}
+

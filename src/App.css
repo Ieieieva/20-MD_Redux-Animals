@@ -1,12 +1,15 @@
-
 .App {
   width: 1000px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
 }
 
 .App__heading {
   text-align: center;
   font-size: 2.5rem;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .App__form {
@@ -16,20 +19,3 @@
   gap: 15px;
 }
 
-.animal__container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  padding: 50px;
-}
-
-.animal__card {
-  width: 20%;
-  text-align: center;
-  background-color: rgb(254, 214, 161);
-  padding: 15px;
-}
-
-.animal__image {
-  width: 100%;
-}
